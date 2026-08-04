@@ -1,0 +1,400 @@
+:root {
+    --bg-color: #080811;
+    --card-bg: rgba(16, 18, 32, 0.85);
+    --neon-cyan: #00f3ff;
+    --neon-pink: #ff0055;
+    --neon-yellow: #fcee0a;
+    --text-color: #e0e6ed;
+    --border-glow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: auto;
+    min-width: 1024px;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 0, 85, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 243, 255, 0.1) 0%, transparent 40%);
+}
+
+/* --- Header & Nav --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(8, 8, 17, 0.9);
+    border-bottom: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+/* --- Logo Gambar --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-logo {
+    height: 60px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.7)); 
+    transition: 0.3s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.9));
+}
+
+.logo {
+    display: none;
+}
+
+.logo span {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px var(--neon-pink);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+/* --- Hero Section & Slideshow Pure CSS (Pergantian 1 Detik) --- */
+.hero {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Konten utama tetap di tengah vertikal */
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container Slideshow */
+.hero-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Item Slide Gambar dengan Animasi CSS Pure */
+.hero-slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: pureCssSlideshow 22s infinite; /* Total perulangan 3 detik untuk 3 slide */
+}
+
+/* Pengaturan Timing Delay Per 1 Detik untuk 3 Gambar */
+.hero-slideshow .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.hero-slideshow .slide:nth-child(2) {
+    animation-delay: 2s;
+}
+.hero-slideshow .slide:nth-child(3) {
+    animation-delay: 4s;
+}
+.hero-slideshow .slide:nth-child(4) {
+    animation-delay: 6s;
+}
+.hero-slideshow .slide:nth-child(5) {
+    animation-delay: 8s;
+}
+.hero-slideshow .slide:nth-child(6) {
+    animation-delay: 10s;
+}
+.hero-slideshow .slide:nth-child(7) {
+    animation-delay: 12s;
+}
+.hero-slideshow .slide:nth-child(8) {
+    animation-delay: 14s;
+}
+.hero-slideshow .slide:nth-child(9) {
+    animation-delay: 16s;
+}
+.hero-slideshow .slide:nth-child(10) {
+    animation-delay: 18s;
+}
+.hero-slideshow .slide:nth-child(11) {
+    animation-delay: 20s;
+}
+/* Keyframes Animasi Transisi Pudar */
+@keyframes pureCssSlideshow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }  /* Muncul cepat */
+    33% { opacity: 1; }  /* Tahan selama 1 detik */
+    43% { opacity: 0; }  /* Pudar ke slide berikutnya */
+    100% { opacity: 0; }
+}
+
+/* Overlay Gelap Tema Cyberpunk */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(8, 8, 17, 0.75) 0%,
+        rgba(8, 8, 17, 0.85) 50%,
+        rgba(8, 8, 17, 0.95) 100%
+    );
+    z-index: 2;
+}
+
+/* Konten Teks Hero */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px var(--neon-pink), -2px -2px 0px var(--neon-cyan);
+}
+.hero-description {
+    font-size: 1.3rem;
+    color: #a0aab8;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+.hero footer {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px var(--neon-pink), -2px -2px 0px var(--neon-cyan);
+    }
+.hero-footer-text {
+    position: absolute;
+    bottom: -300px; /* Jarak dari dasar banner */
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero-footer-text h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px var(--neon-pink), -2px -2px 0px var(--neon-cyan);
+}
+.hero p {
+    font-size: 1.4rem;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    color: #a0aab8;
+}
+
+.btn-cyber {
+    padding: 12px 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    background: var(--neon-cyan);
+    text-decoration: none;
+    text-transform: uppercase;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    transition: 0.3s;
+    box-shadow: 0 0 15px var(--neon-cyan);
+    display: inline-block;
+}
+
+.btn-cyber:hover {
+    background: var(--neon-pink);
+    color: #fff;
+    box-shadow: 0 0 20px var(--neon-pink);
+    transform: scale(1.05);
+}
+
+/* --- Services Section --- */
+.services {
+    padding: 80px 8%;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--neon-pink);
+    margin: 10px auto 0;
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    padding: 30px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--neon-cyan);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan);
+    box-shadow: var(--border-glow);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--neon-pink);
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card p {
+    color: #a0aab8;
+    font-size: 1rem;
+}
+
+/* --- Contact / Location Section --- */
+.contact {
+    padding: 80px 8%;
+    background: rgba(12, 14, 26, 0.9);
+    border-top: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--neon-cyan);
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item p {
+    font-size: 1.1rem;
+}
+
+.btn-wa {
+    background: #25d366;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-wa:hover {
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.8);
+    transform: scale(1.03);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #707b8e;
+}
+
