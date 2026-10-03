@@ -1,0 +1,8 @@
+{
+  "name": "Techincside",
+  "description": "Techincside - Jasa Rakit Komputer, PC Gaming, Rig Editing, Workstation, Networking, dan Maintenance.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

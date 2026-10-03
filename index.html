@@ -2,144 +2,498 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techincside - Jasa Rakit Komputer</title>
+    <meta name="description" content="Techincside - Jasa Rakit Komputer, PC Gaming, Rig Editing, Workstation, Networking, dan Maintenance.">
+    <meta property="og:title" content="Techincside - Jasa Rakit Komputer">
+    <meta property="og:description" content="Techincside - Jasa Rakit Komputer, PC Gaming, Rig Editing, Workstation, Networking, dan Maintenance.">
+    <meta name="theme-color" content="#080811">
     
     <!-- Favicon Tab Browser -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="icon" type="image/jpeg" href="./logo.jpg">
 
     <!-- Google Fonts: Orbitron & Rajdhani -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="logo-container">
-            <a href="#home">
-                <img src="logo-techincside.jpg" alt="Techincside Logo" class="main-logo">
-            </a>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-container">
+                <a href="#home" class="logo-link">
+                    <img src="./logo-techincside.jpg" alt="Techincside Logo" class="main-logo">
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Layanan</a>
+                <a href="#simulator" class="nav-link">Simulasi Spek</a>
+                <a href="#keunggulan" class="nav-link">Keunggulan</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+                <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20konsultasi%20jasa" class="btn-nav-wa" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+                </a>
+            </nav>
         </div>
-        
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Layanan</a>
-            <a href="#contact">Kontak</a>
-        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <!-- BACKGROUND SLIDESHOW -->
-        <div class="hero-slideshow">
-            <div class="slide active" style="background-image: url('bg1.jpg');"></div>
-            <div class="slide" style="background-image: url('bg2.jpg');"></div>
-            <div class="slide" style="background-image: url('bg4.jpg');"></div>
-            <div class="slide" style="background-image: url('bg5.jpg');"></div>
-            <div class="slide" style="background-image: url('bg6.jpg');"></div>
-            <div class="slide" style="background-image: url('bg7.jpg');"></div>
-            <div class="slide" style="background-image: url('bg8.jpg');"></div>
-            <div class="slide" style="background-image: url('bg9.jpg');"></div>
-            <div class="slide" style="background-image: url('bg10.jpg');"></div>
-            <div class="slide" style="background-image: url('bg11.jpg');"></div>           
+        <div class="hero-slideshow" id="heroSlideshow">
+            <div class="slide active" style="background-image: url('./bg1.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg2.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg3.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg4.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg5.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg6.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg7.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg8.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg9.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg10.jpg');"></div>
+            <div class="slide" style="background-image: url('./bg11.jpg');"></div>
         </div>
 
-        <!-- OVERLAY GELAP -->
+        <!-- OVERLAY GELAP DENGAN AKSEN SCANLINE -->
         <div class="hero-overlay"></div>
 
         <!-- KONTEN TEKS HERO -->
         <div class="hero-content">
-            <h1>MENERIMA JASA RAKIT PC</h1>
-            <p>Rakit PC • Install Software & Game • Server • Networking • Maintenance<br>
-            • Upgrade Hardware Cepat, profesional, dan siap mendukung kebutuhan teknologi Anda.</p>
-            <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20konsultasi%20jasa" class="btn-cyber" target="_blank">
-                >_ INISIASI ORDER
-            </a>
-        <!-- TEKS BANNER BAWAH (Di atas Layanan Utama) -->
-        <div class="hero-footer-text">
-            <h2>BUILD AND MAKE YOUR OWN PC.</h2>
+            <div class="hero-badge">
+                <span class="pulse-indicator"></span>
+                <span>SYSTEM ONLINE // VERIFIED PC BUILDER</span>
+            </div>
+
+            <h1 class="hero-title">MENERIMA JASA RAKIT PC</h1>
+            
+            <p class="hero-subtitle">
+                Rakit PC Gaming & Workstation • Install Software & Game • Setup Server & Cloud • Networking & WiFi Mikrotik • Maintenance & Deep Cleaning • Upgrade Hardware Berkualitas.
+            </p>
+
+            <div class="hero-actions">
+                <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20konsultasi%20jasa%20rakit%20PC" class="btn-cyber btn-primary" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-terminal"></i> INISIASI ORDER
+                </a>
+                <a href="#services" class="btn-cyber btn-secondary">
+                    <i class="fa-solid fa-list-check"></i> JELAJAHI LAYANAN
+                </a>
+            </div>
+
+            <!-- Quick Trust Badges -->
+            <div class="hero-perks">
+                <div class="perk-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Komponen 100% Original & Bergaransi</span>
+                </div>
+                <div class="perk-item">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Cable Management Presisi & Rapi</span>
+                </div>
+                <div class="perk-item">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>Stress Test 100% Beban Penuh Stabil</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow Indicators & Controls -->
+        <div class="slideshow-controls">
+            <button class="slide-nav-btn" id="prevSlide" aria-label="Slide Sebelumnya">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="slide-dots" id="slideDots"></div>
+            <button class="slide-nav-btn" id="nextSlide" aria-label="Slide Berikutnya">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
     </section>
+
+    <!-- TEKS BANNER HIGHLIGHT (Transisi Cyberpunk ke Layanan) -->
+    <div class="hero-banner-strip">
+        <div class="banner-inner">
+            <div class="banner-bracket">[</div>
+            <div class="banner-body">
+                <h2 class="banner-heading">BUILD AND MAKE YOUR OWN PC</h2>
+                <p class="banner-subtext">KUSTOMISASI BEBAS SESUAI KEBUTUHAN KERJA, GAMING, DAN ANGGARAN ANDA</p>
+            </div>
+            <div class="banner-bracket">]</div>
+        </div>
+    </div>
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <h2 class="section-title">LAYANAN UTAMA</h2>
+        <div class="section-header">
+            <span class="section-tag">// OUR CAPABILITIES</span>
+            <h2 class="section-title">LAYANAN UTAMA</h2>
+            <p class="section-desc">Pilihan layanan komprehensif mulai dari perakitan sistem gaming monster, infrastruktur jaringan kantor, hingga pemeliharaan server.</p>
+        </div>
+
         <div class="grid">
             
             <div class="card">
-                <i class="fa-solid fa-desktop"></i>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <span class="card-badge">Gaming & Workstation</span>
                 <h3>Rakit PC Custom</h3>
-                <p>Kustomisasi PC Gaming, Rig Editing, atau Workstation sesuai budget & performa maksimal.</p>
+                <p>Kustomisasi PC Gaming eSports/AAA, Rig Rendering Video 4K/8K, hingga Workstation 3D Architecture sesuai budget dengan air/liquid cooling maksimal.</p>
+                <div class="card-action">
+                    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20konsultasi%20Rakit%20PC%20Custom" class="btn-card-action" target="_blank" rel="noopener">
+                        Konsultasi Spek <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="card">
-                <i class="fa-solid fa-network-wired"></i>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <span class="card-badge">LAN & Wireless</span>
                 <h3>Jaringan & Internet</h3>
-                <p>Instalasi LAN, WiFi Mikrotik/Cisco, penataan kabel, dan manajemen bandwidth super lancar.</p>
+                <p>Instalasi kabel LAN Cat6/Cat7, konfigurasi router WiFi MikroTik & Cisco, penataan rack server, segmentasi VLAN, dan manajemen bandwidth stabil.</p>
+                <div class="card-action">
+                    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20konsultasi%20Jaringan%20dan%20Internet" class="btn-card-action" target="_blank" rel="noopener">
+                        Konsultasi Jaringan <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="card">
-                <i class="fa-solid fa-server"></i>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <span class="card-badge">Virtualization & Cloud</span>
                 <h3>Server & Cloud</h3>
-                <p>Setup server lokal/cloud, maintenance, backup data, serta konfigurasi keamanan jaringan.</p>
+                <p>Setup server kantor lokal atau cloud (Proxmox, VMware, Linux Ubuntu/Debian, Windows Server), scheduled backup data otomatis, dan hardening firewall.</p>
+                <div class="card-action">
+                    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20konsultasi%20Server%20dan%20Cloud" class="btn-card-action" target="_blank" rel="noopener">
+                        Konsultasi Server <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="card">
-                <i class="fa-solid fa-wrench"></i>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+                <span class="card-badge">Thermal & Performance</span>
                 <h3>Maintenance PC</h3>
-                <p>Pembersihan hardware, ganti thermal paste, instalasi ulang OS, dan optimasi performa PC.</p>
+                <p>Pembersihan debu motherboard & heatsink mendalam, penggantian thermal paste kualitas premium, repasting GPU, serta re-cable management rapi.</p>
+                <div class="card-action">
+                    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20service%20Maintenance%20PC" class="btn-card-action" target="_blank" rel="noopener">
+                        Booking Maintenance <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="card">
-                <i class="fa-solid fa-compact-disc"></i>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-compact-disc"></i>
+                </div>
+                <span class="card-badge">OS & Applications</span>
                 <h3>Install Software</h3>
-                <p>Pemasangan OS (Windows/Linux), software desain, tools arsitektur, hingga aplikasi produktivitas.</p>
+                <p>Pemasangan sistem operasi Windows 10/11 Pro & Linux, software desain (Adobe CC, Blender, AutoCAD), tools produktivitas, serta driver terbaru bebas bloatware.</p>
+                <div class="card-action">
+                    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20Install%20Software" class="btn-card-action" target="_blank" rel="noopener">
+                        Order Software <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="card">
-                <i class="fa-solid fa-gamepad"></i>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <span class="card-badge">FPS Boost & Tweaks</span>
                 <h3>Game Setup & Tuning</h3>
-                <p>Install game PC terbaru, optimasi FPS, setup emulator, dan tweaking latency untuk gaming.</p>
+                <p>Instalasi game PC populer (Steam, Epic, Genshin, Valorant), optimasi latency respon input, tuning overclock stabil, XMP RAM, dan benchmark grafis.</p>
+                <div class="card-action">
+                    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20Game%20Setup%20dan%20Tuning" class="btn-card-action" target="_blank" rel="noopener">
+                        Tuning Game <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">HUBUNGI KAMI</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Jl. Raya Parung Jahe RT. 002/001 Desa Sukamanah, Kec. Jambe, Kab. Tangerang - Banten 15710</p>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>udelzonefool@gmail.com</p>
-                </div>
-                <div class="info-item">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <p>089508129920</p>
-                </div>
+    <!-- Interactive PC Build Consultation Simulator -->
+    <section class="simulator-section" id="simulator">
+        <div class="section-header">
+            <span class="section-tag">// INTERACTIVE RIG CONFIGURATOR</span>
+            <h2 class="section-title">SIMULASI ESTIMASI BUDGET</h2>
+            <p class="section-desc">Pilih peruntukan dan rentang anggaran Anda untuk mendapatkan saran racikan spesifikasi instan yang langsung diteruskan ke teknisi via WhatsApp.</p>
+        </div>
+
+        <div class="simulator-card">
+            <div class="simulator-controls">
                 
-                <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20butuh%20bantuan%20teknis" class="btn-wa" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Sekarang
+                <!-- Opsi Kategori -->
+                <div class="config-group">
+                    <label class="config-label"><i class="fa-solid fa-crosshairs"></i> 1. Kebutuhan Utama Komputer:</label>
+                    <div class="config-options" id="purposeOptions">
+                        <button type="button" class="opt-btn active" data-type="purpose" data-val="PC Gaming eSports & AAA">
+                            <i class="fa-solid fa-gamepad"></i> Gaming eSports & AAA
+                        </button>
+                        <button type="button" class="opt-btn" data-type="purpose" data-val="Editing Video & Render 3D">
+                            <i class="fa-solid fa-video"></i> Editing Video / 3D Render
+                        </button>
+                        <button type="button" class="opt-btn" data-type="purpose" data-val="Office, Desain & Multitasking">
+                            <i class="fa-solid fa-briefcase"></i> Office & Desain Grafis
+                        </button>
+                        <button type="button" class="opt-btn" data-type="purpose" data-val="Server Kantor / Workstation">
+                            <i class="fa-solid fa-server"></i> Server / Home Lab / NAS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Opsi Budget -->
+                <div class="config-group">
+                    <label class="config-label"><i class="fa-solid fa-wallet"></i> 2. Target Anggaran (Budget):</label>
+                    <div class="config-options" id="budgetOptions">
+                        <button type="button" class="opt-btn" data-type="budget" data-val="Rp 5 - 10 Juta (Entry Level Power)">
+                            Rp 5 - 10 Juta
+                        </button>
+                        <button type="button" class="opt-btn active" data-type="budget" data-val="Rp 10 - 20 Juta (Mid-Range Sweet Spot)">
+                            Rp 10 - 20 Juta
+                        </button>
+                        <button type="button" class="opt-btn" data-type="budget" data-val="Rp 20 - 35 Juta (High-End Beast)">
+                            Rp 20 - 35 Juta
+                        </button>
+                        <button type="button" class="opt-btn" data-type="budget" data-val="Rp 35 Juta+ (Ultra Enthusiast / Workstation)">
+                            Rp 35 Juta+ (Ultra)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Opsi Platform Preferensi -->
+                <div class="config-group">
+                    <label class="config-label"><i class="fa-solid fa-microchip"></i> 3. Preferensi Processor & GPU:</label>
+                    <div class="config-options" id="platformOptions">
+                        <button type="button" class="opt-btn active" data-type="platform" data-val="Intel Core + Nvidia GeForce RTX">
+                            Intel + Nvidia RTX
+                        </button>
+                        <button type="button" class="opt-btn" data-type="platform" data-val="AMD Ryzen + Radeon RX / Nvidia">
+                            AMD Ryzen + Radeon/RTX
+                        </button>
+                        <button type="button" class="opt-btn" data-type="platform" data-val="Rekomendasikan yang Terbaik Sesuai Budget">
+                            Rekomendasi Teknisi
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Preview Card Hasil Simulasi -->
+            <div class="simulator-summary">
+                <div class="summary-badge">KONFIGURASI TERPILIH</div>
+                <div class="summary-item">
+                    <span class="label">Tipe Kebutuhan:</span>
+                    <span class="value" id="summaryPurpose">PC Gaming eSports & AAA</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Target Budget:</span>
+                    <span class="value val-cyan" id="summaryBudget">Rp 10 - 20 Juta (Mid-Range Sweet Spot)</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Platform Pilihan:</span>
+                    <span class="value" id="summaryPlatform">Intel Core + Nvidia GeForce RTX</span>
+                </div>
+                <div class="summary-hint" id="summaryHint">
+                    <i class="fa-solid fa-circle-check"></i> Sangat cocok untuk gaming 1080p/1440p resolusi tinggi ultra settings, editing Premiere Pro & streaming tanpa lag.
+                </div>
+                <a href="#" id="btnSendSimulation" class="btn-cyber btn-simulator-wa" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> KONSULTASIKAN RACIKAN INI VIA WA
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Keunggulan Section -->
+    <section class="features-section" id="keunggulan">
+        <div class="section-header">
+            <span class="section-tag">// WHY TECHINCSIDE</span>
+            <h2 class="section-title">STANDAR KUALITAS KAMI</h2>
+            <p class="section-desc">Kami tidak sekadar merangkai baut dan kabel, kami memastikan setiap rig komputer bekerja pada efisiensi termal dan kestabilan tertinggi.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h4>Cable Management Presisi</h4>
+                <p>Jalur kabel ditata rapi tersembunyi untuk memaksimalkan sirkulasi udara (airflow) dingin dan estetika showcase elegan.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                <h4>Manajemen Termal Dingin</h4>
+                <p>Aplikasi thermal paste dengan takaran presisi serta konfigurasi intake & exhaust fan optimal agar suhu hardware tetap adem saat gaming berat.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h4>Stress Test Menyeluruh</h4>
+                <p>Sebelum dikirim atau diserahkan, PC diuji stabilitas penuh dengan benchmark FurMark, Cinebench, dan MemTest64 untuk memastikan 0% crash.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                <h4>Dukungan Purna Jual</h4>
+                <p>Konsultasi berkala, panduan upgrade hardware masa depan, hingga bantuan troubleshooting jarak jauh bila dibutuhkan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-tag">// DIRECT COMMUNICATION</span>
+            <h2 class="section-title">HUBUNGI KAMI</h2>
+            <p class="section-desc">Siap merakit komputer impian Anda? Silakan hubungi kami via WhatsApp, email, atau datang langsung ke workshop.</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Informasi Kontak & Workshop -->
+            <div class="contact-info-card">
+                <h3 class="contact-card-title"><i class="fa-solid fa-id-card"></i> INFORMASI WORKSHOP</h3>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-text">
+                        <span class="info-label">Alamat Workshop:</span>
+                        <p id="addressText">Jl. Raya Parung Jahe RT. 002/001 Desa Sukamanah, Kec. Jambe, Kab. Tangerang - Banten 15710</p>
+                        <div class="address-actions">
+                            <button type="button" class="btn-mini" id="btnCopyAddress">
+                                <i class="fa-solid fa-copy"></i> <span id="copyText">Salin Alamat</span>
+                            </button>
+                            <a href="https://maps.google.com/?q=Sukamanah+Jambe+Tangerang" target="_blank" rel="noopener" class="btn-mini btn-maps">
+                                <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="info-text">
+                        <span class="info-label">WhatsApp Hotline:</span>
+                        <p class="highlight-text">0895-0812-9920</p>
+                        <span class="status-pill"><span class="pulse-dot"></span> Fast Response (09.00 - 21.00 WIB)</span>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info-text">
+                        <span class="info-label">Email Korespondensi:</span>
+                        <p><a href="mailto:udelzonefool@gmail.com" class="link-contact">udelzonefool@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-direct-btn">
+                    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20butuh%20bantuan%20teknis%20dan%20konsultasi" class="btn-wa" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Form Pesan Cepat Langsung ke WhatsApp -->
+            <div class="contact-form-card">
+                <h3 class="contact-card-title"><i class="fa-solid fa-comment-dots"></i> KIRIM PESAN KONSULTASI</h3>
+                <form id="quickContactForm" class="cyber-form">
+                    <div class="form-group">
+                        <label for="clientName">Nama Anda:</label>
+                        <input type="text" id="clientName" class="form-input" placeholder="Contoh: Budi Santoso" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clientService">Kebutuhan Layanan:</label>
+                        <select id="clientService" class="form-input form-select">
+                            <option value="Rakit PC Gaming / Workstation">Rakit PC Gaming / Workstation</option>
+                            <option value="Maintenance / Service PC">Maintenance / Deep Clean PC</option>
+                            <option value="Instalasi Jaringan & WiFi">Instalasi Jaringan & WiFi</option>
+                            <option value="Setup Server / Cloud">Setup Server / Cloud</option>
+                            <option value="Install Software & OS">Install Software & OS</option>
+                            <option value="Upgrade Hardware / Konsultasi Lainnya">Upgrade Hardware / Konsultasi Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clientBudget">Perkiraan Budget (Opsional):</label>
+                        <input type="text" id="clientBudget" class="form-input" placeholder="Contoh: 12 Juta / Fleksibel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clientMessage">Catatan Tambahan:</label>
+                        <textarea id="clientMessage" rows="3" class="form-input" placeholder="Sebutkan game/software yang ingin dimainkan atau kendala PC Anda..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-cyber btn-submit-wa">
+                        <i class="fa-brands fa-whatsapp"></i> KIRIM VIA WHATSAPP
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Techincside. All Rights Reserved. Designed with Cyberpunk Aesthetic.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="./logo.jpg" alt="Logo" class="footer-logo">
+                <div>
+                    <h4 class="footer-title">TECHINCSIDE</h4>
+                    <p class="footer-tagline">High Performance PC Assembly & Infrastructure</p>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#services">Layanan</a>
+                <a href="#simulator">Simulasi</a>
+                <a href="#keunggulan">Keunggulan</a>
+                <a href="#contact">Kontak</a>
+            </div>
+
+            <div class="footer-copy">
+                <p>&copy; 2026 Techincside. All Rights Reserved. Engineered with Cyberpunk Precision.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Floating Action WhatsApp Button -->
+    <a href="https://wa.me/6289508129920?text=Halo%20Techincside,%20saya%20ingin%20tanya%20jasa%20komputer" class="floating-wa" target="_blank" rel="noopener" aria-label="Konsultasi WhatsApp Cepat">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="floating-tooltip">Konsultasi WA</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-notification" id="toast">Alamat berhasil disalin!</div>
+
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
